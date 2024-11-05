@@ -11,7 +11,7 @@ import Editar_jugadores from "./screens/Editar_jugadores";
 import Login from "./screens/Login";
 
 export default function App() {
-  const Stack = createStackNavigator(); // Inicializar el stack
+  const Stack = createStackNavigator();
 
   function MyStack() {
     return (
@@ -20,40 +20,28 @@ export default function App() {
           name="Login"
           component={Login}
           options={{
-            title: "LIGA DE ESTRELLAS",
-            headerTitleAlign: "center",
-            headerStyle: { backgroundColor: "#2626ff" },
-            headerTintColor: "#fff",
+            headerShown: false, // Oculta completamente el encabezado
           }}
         />
         <Stack.Screen
           name="Mostrar Jugadores"
           component={Mostrar_jugadores}
           options={{
-            title: "MOSTRAR JUGADORES",
-            headerTitleAlign: "center",
-            headerStyle: { backgroundColor: "#2626ff" },
-            headerTintColor: "#fff",
+            headerShown: false,
           }}
         />
         <Stack.Screen
           name="Crear Jugadores"
           component={Jugadores}
           options={{
-            title: "CREAR JUGADORES",
-            headerTitleAlign: "center",
-            headerStyle: { backgroundColor: "#2626ff" },
-            headerTintColor: "#fff",
+            headerShown: false,
           }}
         />
         <Stack.Screen
           name="Editar Jugador"
           component={Editar_jugadores}
           options={{
-            title: "EDITAR JUGADOR",
-            headerTitleAlign: "center",
-            headerStyle: { backgroundColor: "#2626ff" },
-            headerTintColor: "#fff",
+            headerShown: false,
           }}
         />
       </Stack.Navigator>
@@ -75,3 +63,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+

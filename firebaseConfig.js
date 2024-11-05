@@ -1,10 +1,17 @@
-// Import the functions you need from the SDKs you need
+// Importa las funciones necesarias del SDK
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from 'firebase/firestore';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage } from "firebase/storage";
+import { 
+  getFirestore, 
+  collection, 
+  addDoc, 
+  getDocs, 
+  doc, 
+  deleteDoc, 
+  updateDoc 
+} from "firebase/firestore";
 
-// Your web app's Firebase configuration
+// Configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyDH_cTazvbM4JrCVhxde5IH-sp-lCHKap8",
   authDomain: "ligadeestrellas-61ee5.firebaseapp.com",
@@ -14,10 +21,11 @@ const firebaseConfig = {
   appId: "1:351280151693:web:00bdca7d49c74573e236c4"
 };
 
-// Inicializa la app de Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
 
-// Exporta Firestore para usarlo en el código
+// Exporta Firestore y Storage para utilizarlos
 const db = getFirestore(app);
+const storage = getStorage(app);
 
-export { db, collection, addDoc, getDocs, doc, deleteDoc, updateDoc };
+export { db, storage, collection, addDoc, getDocs, doc, deleteDoc, updateDoc };
